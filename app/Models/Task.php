@@ -17,4 +17,44 @@ class Task {
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Create a new task
+    public function create($title, $description){
+
+        $query = $this->db->prepare("INSERT INTO tasks SET title = :title, description = :description");
+        $query->execute([
+            'title' => $title,
+            'description' => $description
+        ]);
+
+        return $query->rowCount() > 0;
+    }
+
+    // Update an existing task
+    public function update($id, $title, $description){
+
+        $query = $this->db->prepare("UPDATE tasks SET title = :title, description = :description WHERE id = :id");
+        $query->execute([
+            'title' => $title,
+            'description' => $description,
+            'id' => $id
+        ]);
+
+        return $query->rowCount() > 0;
+    }
+
+    public function getById($id){
+
+        $query = $this->db->prepare("SELECT * FROM tasks WHERE id = :id");
+        $query->execute(['id' => $id]);
+        return $query->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Delete a task
+    public function delete($id){
+
+        $query = $this->db->prepare("DELETE FROM tasks WHERE id = :id");
+        $query->execute(['id' => $id]);
+        return $query->rowCount();
+    }
 }

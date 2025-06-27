@@ -6,12 +6,16 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Controllers\\Front\\ExampleController' => $baseDir . '/app/Controllers/Front/ExampleController.php',
-    'App\\Controllers\\Front\\HomeController' => $baseDir . '/app/Controllers/Front/HomeController.php',
-    'App\\Controllers\\Front\\TaskController' => $baseDir . '/app/Controllers/Front/TaskController.php',
-    'App\\Core\\BaseController' => $baseDir . '/app/Core/BaseController.php',
-    'App\\Core\\Database' => $baseDir . '/app/Core/Database.php',
-    'App\\Core\\Route' => $baseDir . '/app/Core/Route.php',
-    'App\\Models\\Task' => $baseDir . '/app/Models/Task.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'DateError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
+    'DateException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
+    'DateInvalidOperationException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
+    'DateInvalidTimeZoneException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateInvalidTimeZoneException.php',
+    'DateMalformedIntervalStringException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateMalformedIntervalStringException.php',
+    'DateMalformedPeriodStringException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateMalformedPeriodStringException.php',
+    'DateMalformedStringException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateMalformedStringException.php',
+    'DateObjectError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateObjectError.php',
+    'DateRangeError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateRangeError.php',
+    'Override' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/Override.php',
+    'SQLite3Exception' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
 );
